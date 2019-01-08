@@ -21,7 +21,6 @@ class RecordSoundsViewControler: UIViewController, AVAudioRecorderDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,9 +35,7 @@ class RecordSoundsViewControler: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func recordAudio(_ sender: Any) {
-//        recordingLabel.text = "Recording in Progress!"
-//        stopRecordingButton.isEnabled = true
-//        recordButton.isEnabled = false
+
         updateUI(isRecording: true)
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
@@ -47,9 +44,7 @@ class RecordSoundsViewControler: UIViewController, AVAudioRecorderDelegate {
         let pathArray = [dirPath, recordingName]
         
         let filePath = URL(string: pathArray.joined(separator: "/"))
-        
-        //print(filePath as Any)
-        
+      
         let session = AVAudioSession.sharedInstance()
         
         try! session.setCategory(AVAudioSession.Category.playAndRecord, mode: AVAudioSession.Mode.default, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
@@ -65,12 +60,11 @@ class RecordSoundsViewControler: UIViewController, AVAudioRecorderDelegate {
     
     @IBAction func stopRecording(_ sender: Any) {
         updateUI(isRecording: false)
-        
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
         
-    
+        
     }
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
@@ -78,7 +72,13 @@ class RecordSoundsViewControler: UIViewController, AVAudioRecorderDelegate {
         if flag{
             performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
         }else{
-          //   print("recording was not successful")
+            
+            let alert = UIAlertController(title: "Recoring Error", message: "Something went wrong . \n Please try again!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
+            
         }
         
     }
