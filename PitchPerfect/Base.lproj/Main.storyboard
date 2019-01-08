@@ -45,12 +45,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="WwS-sS-7pW" firstAttribute="centerX" secondItem="SIx-NL-qyc" secondAttribute="centerX" id="9bl-Qq-GJt"/>
-                            <constraint firstItem="SIx-NL-qyc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EVv-Ge-5qo"/>
-                            <constraint firstItem="9t2-Jl-FYb" firstAttribute="centerX" secondItem="WwS-sS-7pW" secondAttribute="centerX" id="LcQ-pk-pAu"/>
-                            <constraint firstItem="WwS-sS-7pW" firstAttribute="top" secondItem="SIx-NL-qyc" secondAttribute="bottom" constant="12" id="W1L-DG-1gr"/>
-                            <constraint firstItem="9t2-Jl-FYb" firstAttribute="top" secondItem="WwS-sS-7pW" secondAttribute="bottom" constant="12" id="WD6-bu-gRl"/>
-                            <constraint firstItem="SIx-NL-qyc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yWL-F4-DIv"/>
+                            <constraint firstItem="WwS-sS-7pW" firstAttribute="centerX" secondItem="SIx-NL-qyc" secondAttribute="centerX" id="4VE-6b-p8t"/>
+                            <constraint firstItem="SIx-NL-qyc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CZL-ws-tCG"/>
+                            <constraint firstItem="9t2-Jl-FYb" firstAttribute="top" secondItem="WwS-sS-7pW" secondAttribute="bottom" constant="12" id="DOE-RQ-1GV"/>
+                            <constraint firstItem="9t2-Jl-FYb" firstAttribute="centerX" secondItem="WwS-sS-7pW" secondAttribute="centerX" id="WG4-1B-2Ng"/>
+                            <constraint firstItem="WwS-sS-7pW" firstAttribute="top" secondItem="SIx-NL-qyc" secondAttribute="bottom" constant="12" id="gqa-Hs-mEo"/>
+                            <constraint firstItem="SIx-NL-qyc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xdP-fJ-3Ew"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
